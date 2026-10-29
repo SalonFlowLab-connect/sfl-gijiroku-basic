@@ -45,3 +45,7 @@ https://xxxx.larksuite.com/minutes/obcnxxxxxxxx 議事録にして
 | メインカラー | 緑 | 緑／青／紫／橙 |
 | 文字起こしの保存 | する | する／しない |
 | 保存先フォルダ | 空（マイスペース直下） | LarkフォルダのURL |
+
+## ライセンス
+
+MIT License（自由に使い・改変・再配布できます。著作権表示は残してください）。© 2026 Salon Flow Lab.
