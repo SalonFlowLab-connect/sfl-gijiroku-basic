@@ -1,0 +1,4 @@
+interface:
+  display_name: "議事録（基本版）"
+  short_description: "妙記のURLから、サマリー・決定事項・図解・フロー図つきのLark議事録を作成"
+  default_prompt: "この妙記を議事録にしてください："
