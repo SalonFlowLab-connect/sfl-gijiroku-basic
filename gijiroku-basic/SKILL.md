@@ -155,4 +155,16 @@ graph LR
 - 文字起こしの全文がDoc本文に入っていない
 - 中国語の用語（逐字稿・逐字録・纪要・待办など）が入っていない。Lark APIの説明に出てくる言葉なので、日本語（文字起こし・会議メモ・ToDo）に直す
 
+### 10. リンク共有をオフにする（必須）
+
+議事録Docは、最初はリンク共有オフで渡す。Larkの既定で「リンクを知っている人全員」になっていることがあるので、そのまま終えない。
+行ってよいのは `link_share_entity` を `closed` にする操作だけ。共有を広げる・メンバーを追加する・ほかの項目を変えるのはしない（共有するかどうかは本人が決める）。
+
+```bash
+lark-cli drive permission.public patch --token "<doc_token>" --type docx --data '{"link_share_entity":"closed"}' --yes
+lark-cli drive +permission-get-setting --token "<doc_token>" --type docx   # link_share_entity が closed になったか確認
+```
+
+オフにできなかった場合（権限が足りない等）は、完成を伝えるときに「リンク共有がオフになっていません。共有設定を確認してください」と必ず添える。
+
 最後に、DocのURLを1行で伝える。決定事項の箱の色は取り直しでは確かめられないため、「緑の箱になっているか、画面で一度見てください」と添える。
